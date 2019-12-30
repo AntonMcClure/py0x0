@@ -1,3 +1,22 @@
+[Version 2.0.0 - 2019/12/30]
+============================
+Added:
+  - cURL replaced with Requests
+  - Requirements.txt added
+
+Removed:
+  - OS-specific code
+
+Fixed:
+  - Vulnerability which made it possible
+    for an attacker to execute arbitrary code.
+  - Bug fixes
+
+To-Do:
+  - Add "Check for Update" functionality
+  - Add opt-in automatic updating
+
+
 [Version 1.0.0 - 2019/12/30]
 ============================
 Added:
