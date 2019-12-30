@@ -33,7 +33,7 @@ def main():
     3: Shorten URL
     4: View py0x0 License Info
     5: View 0x0 Null Pointer License Info
-    6: View cURL License Info
+    6: View requests License Info
     7: What's New in This Version
     8: Check for Updates
     9: Exit
@@ -50,7 +50,7 @@ def main():
     elif choice == "5":
         cmdShowLicenseLachs0r()
     elif choice == "6":
-        cmdShowLicenseCurl()
+        cmdShowLicenseRequests()
     elif choice == "7":
         cmdWhatsNew()
     elif choice == "8":
@@ -65,7 +65,7 @@ def main():
 
 def cmdPause():
     print()
-    os.system('pause' if os.name == 'nt' else 'echo "Press Enter to continue . . ."; read var')
+    input("Press Enter to continue...")
 
 def cmdPostLocalFile():
     clear()
@@ -73,8 +73,13 @@ def cmdPostLocalFile():
     print("    py0x0 | HTTP Post Local File")
     print("=========================================================================")
     txtLocalFile = str(input("Enter full local file path: "))
-    execPostLocalFile = "curl -F'file=@" + txtLocalFile + "' https://" + config.server
-    os.system(execPostLocalFile)
+    with open(txtLocalFile) as localFile:
+        r = requests.post("https://"+config.server,files=dict(file=localFile))
+        if r.status_code != 200:
+            print(f"ERROR: Server returned response code {r.status_code}")
+            cmdPause()
+            main()
+        print(r.content)
     cmdPause()
     main()
 
@@ -84,8 +89,12 @@ def cmdPostRemoteFile():
     print("    py0x0 | HTTP Post Remote File")
     print("=========================================================================")
     txtRemoteFile = str(input("Enter full remote file url: "))
-    execPostRemoteFile = "curl -F'url=" + txtRemoteFile + "' https://" + config.server
-    os.system(execPostRemoteFile)
+    r = requests.post("https://"+config.server,data=dict(url=txtRemoteFile))
+    if r.status_code != 200:
+        print(f"ERROR: Server returned response code {r.status_code}")
+        cmdPause()
+        main()
+    print(r.content)
     cmdPause()
     main()
 
@@ -95,8 +104,12 @@ def cmdShortenUrl():
     print("    py0x0 | Shorten URL")
     print("=========================================================================")
     txtLongUrl = str(input("Enter full url to shorten: "))
-    execShortenUrl = "curl -F'shorten=" + txtLongUrl + "' https://" + config.server
-    os.system(execShortenUrl)
+    r = requests.post("https://"+config.server,data=dict(shorten=txtLongUrl))
+    if r.status_code != 200:
+        print(f"ERROR: Server returned response code {r.status_code}")
+        cmdPause()
+        main()
+    print(r.content)
     cmdPause()
     main()
 
@@ -144,33 +157,22 @@ def cmdShowLicenseLachs0r():
     cmdPause()
     main()
 
-def cmdShowLicenseCurl():
+def cmdShowLicenseRequests():
     clear()
-    print("=========================================================================")
-    print("    py0x0 | cURL Software License")
-    print("=========================================================================")
-    print('COPYRIGHT AND PERMISSION NOTICE')
+    
+    print('Copyright 2019 Kenneth Reitz')
+
+    print('   Licensed under the Apache License, Version 2.0 (the "License");
+    print('   you may not use this file except in compliance with the License.
+    print('   You may obtain a copy of the License at
     print()
-    print('Copyright (C) 1996-2019, Daniel Stenberg, daniel@haxx.se, and many')
-    print('contributors, see the THANKS file.')
+    print('       https://www.apache.org/licenses/LICENSE-2.0
     print()
-    print('All rights reserved.')
-    print()
-    print('Permission to use, copy, modify, and distribute this software for any')
-    print('purpose with or without fee is hereby granted, provided that the above')
-    print('copyright notice and this permission notice appear in all copies.')
-    print()
-    print('THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS')
-    print('OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,')
-    print('FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS.')
-    print('IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,')
-    print('DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR')
-    print('OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE')
-    print('OR OTHER DEALINGS IN THE SOFTWARE.')
-    print()
-    print('Except as contained in this notice, the name of a copyright holder shall not')
-    print('be used in advertising or otherwise to promote the sale, use or other dealings')
-    print('in this Software without prior written authorization of the copyright holder.')
+    print('   Unless required by applicable law or agreed to in writing, software
+    print('   distributed under the License is distributed on an "AS IS" BASIS,
+    print('   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    print('   See the License for the specific language governing permissions and
+    print('   limitations under the License.
 
     cmdPause()
     main()
