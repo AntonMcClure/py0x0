@@ -80,7 +80,7 @@ def cmdPostLocalFile():
             print(f"ERROR: Server returned response code {r.status_code}")
             cmdPause()
             main()
-        print(r.content)
+        print(r.text)
     cmdPause()
     main()
 
@@ -95,7 +95,7 @@ def cmdPostRemoteFile():
         print(f"ERROR: Server returned response code {r.status_code}")
         cmdPause()
         main()
-    print(r.content)
+    print(r.text)
     cmdPause()
     main()
 
@@ -110,7 +110,7 @@ def cmdShortenUrl():
         print(f"ERROR: Server returned response code {r.status_code}")
         cmdPause()
         main()
-    print(r.content)
+    print(r.text)
     cmdPause()
     main()
 
