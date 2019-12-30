@@ -26,7 +26,7 @@ def main():
     print("=========================================================================")
     print("                    -=[ py0x0 -- The Null Pointer ]=-")
     print("=========================================================================")
-    print("Version 1.0.0")
+    print("Version 2.0.0")
     print("Copyright (C) 2019, Anton McClure <anton@antonmcclure.com>.")
     choice = input("""
     1: HTTP Post Local File
