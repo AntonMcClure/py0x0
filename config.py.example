@@ -12,6 +12,9 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
+# SAVE THIS FILE AS `config.py` FOR CHANGES TO SAVE!
+# DO NOT EDIT THE EXAMPLE FILE
+
 # Set the server name for the Null Pointer server of your choice
 # Ex: server = "0x0.st"
 server = ""
