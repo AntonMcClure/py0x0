@@ -57,7 +57,7 @@ def main():
     elif choice == "8":
         cmdCheckUpdates()
     elif choice == "9":
-        sys.exit
+        sys.exit()
     else:
         print()
         print("Invalid selection.")
