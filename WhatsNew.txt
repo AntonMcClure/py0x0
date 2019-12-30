@@ -1,0 +1,14 @@
+[Version 1.0.0 - 2019/12/30]
+============================
+Added:
+  - HTTP Post Local File.
+  - HTTP Post Remote File.
+  - URL shortener.
+  - Info for py0x0 License Info.
+  - Info for 0x0 Null Pointer License Info.
+  - cURL License Info.
+  - "What's New in This Version"
+
+To-Do:
+  - Add "Check for Update" functionality
+  - Add opt-in automatic updating
