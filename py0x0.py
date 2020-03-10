@@ -33,11 +33,9 @@ def main():
     2: HTTP Post Remote File
     3: Shorten URL
     4: View py0x0 License Info
-    5: View 0x0 Null Pointer License Info
-    6: View requests License Info
-    7: What's New in This Version
-    8: Check for Updates
-    9: Exit
+    5: What's New in This Version
+    6: Check for Updates
+    7: Exit
 
     Select an option [1-9]: """)
     if choice == "1":
@@ -49,14 +47,10 @@ def main():
     elif choice == "4":
         cmdShowLicense()
     elif choice == "5":
-        cmdShowLicenseLachs0r()
-    elif choice == "6":
-        cmdShowLicenseRequests()
-    elif choice == "7":
         cmdWhatsNew()
-    elif choice == "8":
+    elif choice == "6":
         cmdCheckUpdates()
-    elif choice == "9":
+    elif choice == "7":
         sys.exit()
     else:
         print()
@@ -136,50 +130,6 @@ def cmdShowLicense():
     cmdPause()
     main()
 
-def cmdShowLicenseLachs0r():
-    clear()
-    print("=========================================================================")
-    print("    py0x0 | 0x0 Null Pointer Software License")
-    print("=========================================================================")
-    print('Copyright (C) 2016, Martin Herkt <lachs0r@srsfckn.biz>')
-    print()
-    print('Permission to use, copy, modify, and/or distribute this software for any')
-    print('purpose with or  without fee is hereby granted,  provided that the above')
-    print('copyright notice and this permission notice appear in all copies.')
-    print()
-    print('THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES')
-    print('WITH  REGARD  TO  THIS  SOFTWARE  INCLUDING  ALL  IMPLIED  WARRANTIES OF')
-    print('MERCHANTABILITY AND FITNESS.  IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR')
-    print('ANY SPECIAL,  DIRECT,  INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES')
-    print('WHATSOEVER RESULTING  FROM LOSS OF USE,  DATA OR PROFITS,  WHETHER IN AN')
-    print('ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF')
-    print('OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.')
-
-    cmdPause()
-    main()
-
-def cmdShowLicenseRequests():
-    clear()
-    print("=========================================================================")
-    print("    py0x0 | Requests Software License")
-    print("=========================================================================")
-    print('Copyright 2019 Kenneth Reitz')
-    print()
-    print('   Licensed under the Apache License, Version 2.0 (the "License");')
-    print('   you may not use this file except in compliance with the License.')
-    print('   You may obtain a copy of the License at')
-    print()
-    print('       https://www.apache.org/licenses/LICENSE-2.0')
-    print()
-    print('   Unless required by applicable law or agreed to in writing, software')
-    print('   distributed under the License is distributed on an "AS IS" BASIS,')
-    print('   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.')
-    print('   See the License for the specific language governing permissions and')
-    print('   limitations under the License.')
-
-    cmdPause()
-    main()
-
 def cmdWhatsNew():
     clear()
     print("=========================================================================")
@@ -197,7 +147,6 @@ def cmdCheckUpdates():
     print("=========================================================================")
     print("    py0x0 | Check for Updates")
     print("=========================================================================")
-    print("Coming soon...")
 
     cmdPause()
     main()
