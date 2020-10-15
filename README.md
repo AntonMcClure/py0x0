@@ -2,7 +2,7 @@
 An easy-to-use command-line interface for 0x0 "Null Pointer" pastebin services written in Python3.
 
 ## Installation (Release)
-  1. Clone the repo with `git clone https://github.com/AntonMcClure/py0x0.git` or `git clone https://git.wnytechcollab.com/anton/py0x0.git`
+  1. Clone the repo with `git clone https://code.pyuku.com/anton/py0x0.git` (alternatively can be cloned from `git clone https://github.com/AntonMcClure/py0x0.git` or `git clone https://tildegit.org/anton/py0x0.git`)
   2. Go to directory `cd py0x0`
   3. Copy `config.py.example` to `config.py`
   4. Open `config.py` with your preferred text editor and set the `server` value
@@ -14,7 +14,7 @@ Run `py0x0.py`
 
 Select menu options 1-3 for 0x0 features, or 4-9 for informational materials.
 
-Remote files **MUST** specify protocol, such as `https://`, `http://`, `ftp://`. Example: `https://amcclure.org`.
+Remote files may specify protocol, such as `https://`, `http://`, `ftp://`. Example: `https://www.antonmcclure.com`. If one isn't included, https will automatically be used.
 
 ## Plans
 
@@ -22,12 +22,12 @@ Remote files **MUST** specify protocol, such as `https://`, `http://`, `ftp://`.
   - Make it possible to set config from within the program
 
 ## Contributing
-Contributions via pull requests or issues via either [GitHub](https://github.com/AntonMcClure/py0x0) or [Gitea (via git.wnytechcollab.com)](https://git.wnytechcollab.com/anton/py0x0) are welcomed! If your suggestion is a major change, please create an issue and describe your changes in detail before making them.
+Contributions via pull requests or issues via either [GitHub](https://github.com/AntonMcClure/py0x0) or [Gitea (via tildegit.org)](https://tildegit.org/anton/py0x0) are welcomed! If your suggestion is a major change, please create an issue and describe your changes in detail before making them.
 
-If your contribution is a security issue, please email me at <anton@amcclure.org> with a detailed description of the issue. **DO NOT DISCLOSE UNPATCHED SECURITY RISKS PUBLICLY**.  
+If your contribution is a security issue, please email me at <anton@antonmcclure.com> with a detailed description of the issue. **DO NOT DISCLOSE UNPATCHED SECURITY RISKS PUBLICLY**.
 
 ## Copyright & License
-    Copyright (C) 2019-2020, Anton McClure <anton@amcclure.org>
+    Copyright (C) 2019-2020, Anton McClure <anton@antonmcclure.com>
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
