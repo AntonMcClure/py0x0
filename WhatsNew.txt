@@ -1,15 +1,8 @@
-[Version 2.0.0 - 2019/12/30]
+[Version 2.1.0 - 2020/10/14]
 ============================
 Added:
-  - cURL replaced with Requests
-  - Requirements.txt added
-
-Removed:
-  - OS-specific code
-
-Fixed:
-  - Vulnerability which made it possible
-    for an attacker to execute arbitrary code.
+  - Checks for URL procolol.
+    If none is given, assume HTTPS.
 
 To-Do:
   - Add "Check for Update" functionality

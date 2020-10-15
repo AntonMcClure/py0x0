@@ -1,3 +1,14 @@
+[Version 2.1.0 - 2020/10/14]
+============================
+Added:
+  - Checks for URL procolol.
+    If none is given, assume HTTPS.
+
+To-Do:
+  - Add "Check for Update" functionality
+  - Add opt-in automatic updating
+
+
 [Version 2.0.0 - 2019/12/30]
 ============================
 Added:
