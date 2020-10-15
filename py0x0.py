@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#   Copyright (C) 2019, Anton McClure <anton@antonmcclure.com>
+#   Copyright (C) 2019-2020, Anton McClure <anton@antonmcclure.com>
 #
 #   Licensed under the Apache License, Version 2.0 (the "License");
 #   you may not use this file except in compliance with the License.
@@ -26,8 +26,8 @@ def main():
     print("=========================================================================")
     print("                    -=[ py0x0 -- The Null Pointer ]=-")
     print("=========================================================================")
-    print("Version 2.0.0")
-    print("Copyright (C) 2019, Anton McClure <anton@antonmcclure.com>.")
+    print("Version 2.1.0")
+    print("Copyright (C) 2019-2020, Anton McClure <anton@antonmcclure.com>.")
     choice = input("""
     1: HTTP Post Local File
     2: HTTP Post Remote File
@@ -84,6 +84,10 @@ def cmdPostRemoteFile():
     print("    py0x0 | HTTP Post Remote File")
     print("=========================================================================")
     txtRemoteFile = str(input("Enter full remote file url: "))
+    if txtRemoteFile.find("http://" or "https://"):
+        txtRemoteFile = "https://"+txtRemoteFile
+    else:
+        txtRemoteFile = txtRemoteFile
     r = requests.post("https://"+config.server,data=dict(url=txtRemoteFile))
     if r.status_code != 200:
         print(f"ERROR: Server returned response code {r.status_code}")
@@ -99,6 +103,10 @@ def cmdShortenUrl():
     print("    py0x0 | Shorten URL")
     print("=========================================================================")
     txtLongUrl = str(input("Enter full url to shorten: "))
+    if txtLongUrl.find("http://" or "https://"):
+        txtLongUrl = "https://"+txtLongUrl
+    else:
+        txtLongUrl = txtLongUrl
     r = requests.post("https://"+config.server,data=dict(shorten=txtLongUrl))
     if r.status_code != 200:
         print(f"ERROR: Server returned response code {r.status_code}")
