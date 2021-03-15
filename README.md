@@ -2,7 +2,7 @@
 An easy-to-use command-line interface for 0x0 "Null Pointer" pastebin services written in Python3.
 
 ## Installation (Release)
-  1. Clone the repo with `git clone https://git.pyuku.com/anton/py0x0.git` (alternatively can be cloned from `git clone https://github.com/AntonMcClure/py0x0.git`)
+  1. Donload from https://www.antonmcclure.com/py0x0/, and extract the downloaded .zip or .tar.gz file.
   2. Go to directory `cd py0x0`
   3. Copy `config.py.example` to `config.py`
   4. Open `config.py` with your preferred text editor and set the `server` value
@@ -23,6 +23,8 @@ Remote files may specify protocol, such as `https://`, `http://`, `ftp://`. Exam
 
 ## Contributing
 Contributions via pull requests and issues via either [GitHub](https://github.com/AntonMcClure/py0x0), or git emails to <anton@antonmcclure.com> are welcomed! If your suggestion is a major change, please create an issue and describe your changes in detail before making them.
+
+Git emails are preferred over pull requests. To learn how to send a git email, please see <https://git-send-email.io/>.
 
 If your contribution is a security issue, please email me at <anton@antonmcclure.com> with a detailed description of the issue. **DO NOT DISCLOSE UNPATCHED SECURITY RISKS PUBLICLY**.
 
