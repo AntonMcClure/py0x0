@@ -22,7 +22,7 @@ Remote files may specify protocol, such as `https://`, `http://`, `ftp://`. Exam
   - Make it possible to set config from within the program
 
 ## Contributing
-Contributions via pull requests or issues via either [GitHub](https://github.com/AntonMcClure/py0x0) or [Gitea (via tildegit.org)](https://tildegit.org/anton/py0x0) are welcomed! If your suggestion is a major change, please create an issue and describe your changes in detail before making them.
+Contributions via pull requests and issues via either [GitHub](https://github.com/AntonMcClure/py0x0), or git emails to <anton@antonmcclure.com> are welcomed! If your suggestion is a major change, please create an issue and describe your changes in detail before making them.
 
 If your contribution is a security issue, please email me at <anton@antonmcclure.com> with a detailed description of the issue. **DO NOT DISCLOSE UNPATCHED SECURITY RISKS PUBLICLY**.
 
