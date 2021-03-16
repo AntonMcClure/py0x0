@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#   Copyright (C) 2019-2020, Anton McClure <anton@antonmcclure.com>
+#   Copyright (C) 2019-2021, Anton McClure <anton@antonmcclure.com>
 #
 #   Licensed under the Apache License, Version 2.0 (the "License");
 #   you may not use this file except in compliance with the License.
@@ -26,18 +26,17 @@ def main():
     print("=========================================================================")
     print("                    -=[ py0x0 -- The Null Pointer ]=-")
     print("=========================================================================")
-    print("Version 2.1.0")
-    print("Copyright (C) 2019-2020, Anton McClure <anton@antonmcclure.com>.")
+    print("Version 2.1.1")
+    print("Copyright (C) 2019-2021, Anton McClure <anton@antonmcclure.com>.")
     choice = input("""
     1: HTTP Post Local File
     2: HTTP Post Remote File
     3: Shorten URL
     4: View py0x0 License Info
     5: What's New in This Version
-    6: Check for Updates
-    7: Exit
+    6: Exit
 
-    Select an option [1-9]: """)
+    Select an option [1-6]: """)
     if choice == "1":
         cmdPostLocalFile()
     elif choice == "2":
@@ -49,8 +48,6 @@ def main():
     elif choice == "5":
         cmdWhatsNew()
     elif choice == "6":
-        cmdCheckUpdates()
-    elif choice == "7":
         sys.exit()
     else:
         print()
@@ -84,16 +81,24 @@ def cmdPostRemoteFile():
     print("    py0x0 | HTTP Post Remote File")
     print("=========================================================================")
     txtRemoteFile = str(input("Enter full remote file url: "))
-    if txtRemoteFile.find("http://" or "https://"):
-        txtRemoteFile = "https://"+txtRemoteFile
-    else:
+    if "http://" in txtRemoteFile:
+        str.replce("http://", "https://")
+    if "https://" not in txtRemoteFile:
+        txtRemoteFile = 'https://' + txtRemoteFile
+    if "https://" in txtRemoteFile:
         txtRemoteFile = txtRemoteFile
-    r = requests.post("https://"+config.server,data=dict(url=txtRemoteFile))
-    if r.status_code != 200:
-        print(f"ERROR: Server returned response code {r.status_code}")
-        cmdPause()
-        main()
-    print(r.text)
+    try:
+        rRemote = requests.get(txtRemoteFile)
+    except requests.exceptions.ConnectionError:
+        print('Cannot connect to site. (Connection error)')
+    except requests.exceptions.HTTPError:
+        print('Cannot connect to site. (HTTP error)')
+    else:
+        rpRemote = requests.post("https://" + config.server,data=dict(url=txtRemoteFile))
+        if rpRemote.status_code != 200:
+            print(f'\nERROR: Server returned response code: {rpRemote.status_code}\n{rpRemote.text}')
+        if rpRemote.status_code == 200:
+            print(f'\n{rpRemote.text}')
     cmdPause()
     main()
 
@@ -103,16 +108,24 @@ def cmdShortenUrl():
     print("    py0x0 | Shorten URL")
     print("=========================================================================")
     txtLongUrl = str(input("Enter full url to shorten: "))
-    if txtLongUrl.find("http://" or "https://"):
-        txtLongUrl = "https://"+txtLongUrl
-    else:
+    if "http://" in txtLongUrl:
+        str.replce("http://", "https://")
+    if "https://" not in txtLongUrl:
+        txtLongUrl = 'https://' + txtLongUrl
+    if "https://" in txtLongUrl:
         txtLongUrl = txtLongUrl
-    r = requests.post("https://"+config.server,data=dict(shorten=txtLongUrl))
-    if r.status_code != 200:
-        print(f"ERROR: Server returned response code {r.status_code}")
-        cmdPause()
-        main()
-    print(r.text)
+    try:
+        rShorten = requests.get(txtLongUrl)
+    except requests.exceptions.ConnectionError:
+        print('Cannot connect to site. (Connection error)')
+    except requests.exceptions.HTTPError:
+        print('Cannot connect to site. (HTTP error)')
+    else:
+        rpShorten = requests.post("https://" + config.server,data=dict(shorten=txtLongUrl))
+        if rpShorten.status_code != 200:
+            print(f'\nERROR: Server returned response code: {rpShorten.status_code}\n{rpShorten.text}')
+        if rpShorten.status_code == 200:
+            print(f'\n{rpShorten.text}')
     cmdPause()
     main()
 
@@ -146,15 +159,6 @@ def cmdWhatsNew():
     fileWhatsNew = open("WhatsNew.txt", "r")
     print(fileWhatsNew.read())
     fileWhatsNew.close()
-
-    cmdPause()
-    main()
-
-def cmdCheckUpdates():
-    clear()
-    print("=========================================================================")
-    print("    py0x0 | Check for Updates")
-    print("=========================================================================")
 
     cmdPause()
     main()

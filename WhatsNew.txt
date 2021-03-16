@@ -1,9 +1,11 @@
-[Version 2.1.0 - 2020/10/14]
+[Version 2.1.1 - 2021/03/15]
 ============================
-Added:
-  - Checks for URL procolol.
-    If none is given, assume HTTPS.
-
-To-Do:
-  - Add "Check for Update" functionality
-  - Add opt-in automatic updating
+Changed:
+  - Both 'HTTP Post Remote File'
+    and 'Shorten URL'
+  - Updated copyright year
+    for 2021.
+    
+Removed:
+  - Placeholders for automatic
+    updating

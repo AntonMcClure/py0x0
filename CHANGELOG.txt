@@ -1,8 +1,25 @@
+[Version 2.1.1 - 2021/03/15]
+============================
+Changed:
+  - Both 'HTTP Post Remote File'
+    and 'Shorten URL'
+  - Updated copyright year
+    for 2021
+
+Fixed:
+  - URL protocol check from
+    version 2.1.0
+
+Removed:
+  - Placeholders for automatic
+    updating
+
+
 [Version 2.1.0 - 2020/10/14]
 ============================
 Added:
-  - Checks for URL procolol.
-    If none is given, assume HTTPS.
+  - Checks for URL protocol
+    If none is given, assume HTTPS
 
 To-Do:
   - Add "Check for Update" functionality
@@ -20,7 +37,7 @@ Removed:
 
 Fixed:
   - Vulnerability which made it possible
-    for an attacker to execute arbitrary code.
+    for an attacker to execute arbitrary code
   - Bug fixes
 
 To-Do:
@@ -31,12 +48,12 @@ To-Do:
 [Version 1.0.0 - 2019/12/30]
 ============================
 Added:
-  - HTTP Post Local File.
-  - HTTP Post Remote File.
-  - URL shortener.
-  - Info for py0x0 License Info.
-  - Info for 0x0 Null Pointer License Info.
-  - cURL License Info.
+  - HTTP Post Local File
+  - HTTP Post Remote File
+  - URL shortener
+  - Info for py0x0 License Info
+  - Info for 0x0 Null Pointer License Info
+  - cURL License Info
   - "What's New in This Version"
 
 To-Do:
