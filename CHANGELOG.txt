@@ -1,3 +1,10 @@
+[Version 2.1.2 - 2021/07/09]
+============================
+Changed:
+  - Software license updated from
+    Apache-2.0 to MIT
+	
+	
 [Version 2.1.1 - 2021/03/15]
 ============================
 Changed:

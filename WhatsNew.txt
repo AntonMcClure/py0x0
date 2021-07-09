@@ -1,11 +1,5 @@
-[Version 2.1.1 - 2021/03/15]
+[Version 2.1.2 - 2021/07/09]
 ============================
 Changed:
-  - Both 'HTTP Post Remote File'
-    and 'Shorten URL'
-  - Updated copyright year
-    for 2021.
-    
-Removed:
-  - Placeholders for automatic
-    updating
+  - Software license updated from
+    Apache-2.0 to MIT
