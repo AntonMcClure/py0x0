@@ -1,6 +1,8 @@
 # py0x0
 An easy-to-use command-line interface for 0x0 "Null Pointer" pastebin services written in Python3.
 
+**Note:** This tool is designed for UNIX/Linux. Windows users are strongly encouraged to use [ez0x0](https://antonmcclure.com/software/ez0x0/) instead. Ez0x0 is intended to provide an easier-to-use interface as compared to the command-line version.
+
 ## Installation (Release)
   1. Download from https://antonmcclure.com/software/py0x0/, and extract the downloaded .zip or .tar.gz file.
   2. Go to directory `cd py0x0`
