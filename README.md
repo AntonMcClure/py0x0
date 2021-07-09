@@ -2,7 +2,7 @@
 An easy-to-use command-line interface for 0x0 "Null Pointer" pastebin services written in Python3.
 
 ## Installation (Release)
-  1. Download from https://antonmcclure.com/~anton/py0x0/, and extract the downloaded .zip or .tar.gz file.
+  1. Download from https://antonmcclure.com/software/py0x0/, and extract the downloaded .zip or .tar.gz file.
   2. Go to directory `cd py0x0`
   3. Copy `config.py.example` to `config.py`
   4. Open `config.py` with your preferred text editor and set the `server` value
