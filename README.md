@@ -1,10 +1,10 @@
 # py0x0
 An easy-to-use command-line interface for 0x0 "Null Pointer" pastebin services written in Python3.
 
-**Note:** This tool is designed for UNIX/Linux. Windows users are strongly encouraged to use [ez0x0](https://antonmcclure.com/software/ez0x0/) instead. Ez0x0 is intended to provide an easier-to-use interface as compared to the command-line version.
+**Note:** This tool is designed for UNIX/Linux. Windows users are strongly encouraged to use [ez0x0](https://antonmcclure.com/~anton/ez0x0/) instead. Ez0x0 is intended to provide an easier-to-use interface for most Windows users when compared to the command-line version.
 
 ## Installation (Release)
-  1. Download from https://antonmcclure.com/software/py0x0/, and extract the downloaded .zip or .tar.gz file.
+  1. Download from https://antonmcclure.com/~anton/py0x0/, and extract the downloaded .zip or .tar.gz file.
   2. Go to directory `cd py0x0`
   3. Copy `config.py.example` to `config.py`
   4. Open `config.py` with your preferred text editor and set the `server` value
@@ -21,7 +21,7 @@ Remote files may specify protocol, such as `https://`, `http://`, `ftp://`. Exam
 ## Plans
 
   - Simplify install process
-  - Make it possible to set config from within the program
+  - Make interface look a bit nicer
 
 ## Contributing
 Contributions via pull requests and issues via it emails to <anton@antonmcclure.com> are welcomed! To learn how to send a git email, please see <https://git-send-email.io/>.
